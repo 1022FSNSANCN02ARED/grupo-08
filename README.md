@@ -7,10 +7,8 @@ El público al que se intentara apuntar es una audiencia joven mayor de 18 años
 ## Sitios que usaremos de referencias
 
 Cerveza artesanal Cheverry ( https://cheverry.com.ar/)
--------------------------------------------------------
 -Marca de cerveza con un buen diseño tanto en su tienda como en sus productos.
 
 Make You Birra (https://makeyourbirra.com/)
---------------------------------------------
 -Diseño simple y buena paleta de colores.
 
