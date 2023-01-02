@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+.header-container{
+    background-color: black;
+    padding: 25px 0;
+    position: relative;
+}
+
+.header-redes-y-login{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.redes, .login{
+    display: flex;
+}
+.redes span , .login span{
+    padding: 5px;
+}
+.redes i, .login i{
+    color: white;
+    padding: 5px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes i:hover , .login i:hover{
+    border: 1px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.redes a, .login a{
+    text-decoration: none;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    background-color: #fec629;
+    padding: 10px 0;
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+nav ul li a{
+    color:black;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+main{
+    min-height: 100vh;
+}
+.main-titulo{
+    text-align: center;
+    margin-top: 20px;
+}
+.container-cervezas{
+    display: grid;
+}
+.container-cervezas span{
+    width: 300px;
+    margin: 20px auto;
+    border: 1px solid black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.container-cervezas img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.container-body-cervezas{
+    padding: 15px;
+}
+
+.formulario{
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #afafaf;
+}
+.formulario i{
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+.formulario input{
+    margin: 30px 0px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.formulario .input-form{
+    display: flex;
+    padding: 20px 10px;
+    border: none;
+    border: 1px solid #cfcfcf;
+    width: 100%;
+    border-radius: 5px;
+}
+.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox p{
+    margin: 5px;
+}
+.form-enviar{
+    background-color: #fec629;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    transition: 0.2s;
+}
+.form-enviar:hover{
+    background-color: #e4a700;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.formulario a{
+    font-size: 1.2em;
+    color: black;
+    text-decoration: none;
+}
+.formulario a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    background-color: black;
+    color: #fec629;
+    padding: 25px;
+    text-align: center;
+}
+
+                /* MEDIA QUERIES */
+
+@media (max-width:500px) {
+    .header-redes-y-login, nav{
+        display: none;
+    }
+    .container-cervezas{
+        grid-template-columns:repeat(1,1fr);
+    }
+    .formulario{
+        margin: 0 auto;
+    }
+    .formulario .input-form{
+        padding: 4px;
+        font-size: 1em;
+    }
+}
+@media (min-width:769px) {
+    .container-cervezas{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media (min-width:1024px) {
+    .container-cervezas{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
