@@ -1,36 +1,33 @@
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Catamaran', sans-serif;
 }
-.header-container {
+.header-container{
   background-color: black;
   padding: 25px 0;
   position: relative;
 }
 
-.header-redes-y-login {
+.header-redes-y-login{
   position: absolute;
-  top: 50%;
+  top:50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
   padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.redes,
-.login {
+.redes, .login{
   display: flex;
 }
-.redes span,
-.login span {
+.redes span , .login span{
   padding: 5px;
 }
-.redes i,
-.login i {
+.redes i, .login i{
   color: white;
   padding: 5px;
   height: 35px;
@@ -39,53 +36,59 @@
   justify-content: center;
   align-items: center;
 }
-.redes i:hover,
-.login i:hover {
+.redes i:hover , .login i:hover{
   border: 1px solid white;
   border-radius: 30px;
   cursor: pointer;
 }
-.redes a,
-.login a {
+.redes a, .login a{
   text-decoration: none;
 }
-.header-logo {
+.header-logo{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-nav {
+nav{
   background-color: #fec629;
   padding: 10px 0;
 }
-nav ul {
+nav ul{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   list-style: none;
 }
-nav ul li a {
-  color: black;
+nav ul li a{
+  color:black;
   text-decoration: none;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-main {
+main{
   min-height: 100vh;
 }
-.main-titulo {
-  margin-top: 20px;
-  font-size: 45px;
-  font-weight: bold;
-}
-
-h1.main-titulo {
+.main-titulo{
   text-align: center;
+  margin-top: 20px;
 }
-.container-cervezas {
+.container-cervezas{
   display: grid;
+}
+.container-cervezas span{
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.container-cervezas img{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.container-body-cervezas{
+  padding: 15px;
 }
 
 .product {
@@ -93,6 +96,10 @@ h1.main-titulo {
   flex-wrap: wrap;
   justify-content: center;
   padding: 50px;
+}
+
+.product img {
+  padding-right: 35px;
 }
 
 .product-carrito {
@@ -113,22 +120,7 @@ h1.main-titulo {
   font-weight: bold;
 }
 
-.container-cervezas span {
-  width: 300px;
-  margin: 20px auto;
-  border: 1px solid black;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-.container-cervezas img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-.container-body-cervezas {
-  padding: 15px;
-}
-
-.formulario {
+.formulario{
   width: 60%;
   margin: 30px auto;
   padding: 20px;
@@ -136,16 +128,16 @@ h1.main-titulo {
   border-radius: 10px;
   box-shadow: 0px 0px 15px #afafaf;
 }
-.formulario i {
+.formulario i{
   margin-left: 10px;
   font-size: 0.9em;
 }
-.formulario input {
+.formulario input{
   margin: 30px 0px;
   font-size: 1.2em;
   font-weight: bold;
 }
-.formulario .input-form {
+.formulario .input-form{
   display: flex;
   padding: 20px 10px;
   border: none;
@@ -153,15 +145,15 @@ h1.main-titulo {
   width: 100%;
   border-radius: 5px;
 }
-.checkbox {
+.checkbox{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.checkbox p {
+.checkbox p{
   margin: 5px;
 }
-.form-enviar {
+.form-enviar{
   background-color: #fec629;
   padding: 10px;
   width: 100%;
@@ -169,62 +161,58 @@ h1.main-titulo {
   border: none;
   transition: 0.2s;
 }
-.form-enviar:hover {
+.form-enviar:hover{
   background-color: #e4a700;
   transition: 0.2s;
   cursor: pointer;
 }
-.formulario a {
+.formulario a{
   font-size: 1.2em;
   color: black;
   text-decoration: none;
 }
-.formulario a:hover {
+.formulario a:hover{
   text-decoration: underline;
 }
 
-footer {
+footer{
   background-color: black;
   color: #fec629;
   padding: 25px;
   text-align: center;
 }
 
-/* MEDIA QUERIES */
+              /* MEDIA QUERIES */
 
-@media (min-width: 480px) {
-  .container-cervezas {
-    grid-template-columns: repeat(1, 1fr);
+@media (max-width:500px) {
+  .header-redes-y-login, nav{
+      display: none;
   }
-  .formulario {
-    margin: 0 auto;
+  .container-cervezas{
+      grid-template-columns:repeat(1,1fr);
   }
-  .formulario .input-form {
-    padding: 4px;
-    font-size: 1em;
+  .formulario{
+      margin: 0 auto;
+  }
+  .formulario .input-form{
+      padding: 4px;
+      font-size: 1em;
   }
 }
-@media (min-width: 770px) {
+@media (min-width:769px) {
+  .container-cervezas{
+      grid-template-columns:repeat(2,1fr);
+  }
   .product {
     flex-wrap: nowrap;
     align-items: top;
   }
+}
 
-  .container-cervezas {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width:1024px) {
+  .container-cervezas{
+      grid-template-columns:repeat(3,1fr);
   }
 }
 
-.product img {
-  padding-right: 35px;
-}
 
-.main-titulo {
-  margin-top: -10px;
-}
-
-@media (min-width: 1024px) {
-  .container-cervezas {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}

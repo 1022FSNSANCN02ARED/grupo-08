@@ -1,8 +1,9 @@
+const express = require('express')
+const app = express()
 const path = require("path")
 
-const express = require('express')
-
-const app = express()
+app.set('view engine', 'ejs')
+app.set('views', __dirname + '/views')
 
 app.use(express.static(path.join(__dirname, "public")))
 
@@ -12,22 +13,22 @@ app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
 
-app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "views/index.html"))
+app.get("/", (req, res) => {
+    res.render('index')
 })
 
 app.get("/productCart", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "views/productCart.html"))
+    res.render('productCart')
 })
 
 app.get("/productDetail", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "views/productDetail.html"))
+    res.render('productDetail')
 })
 
 app.get("/register", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "views/register.html"))
+    res.render('register')
 })
 
 app.get("/login", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "views/login.html"))
+    res.render('login')
 })
