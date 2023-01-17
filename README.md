@@ -22,4 +22,5 @@ Video en el home. Buena barra en el header.
 Filtro de edad. Buen diseño. Imagenes ilustratibas.
 
 
-
+## Link de Trello 
+https://trello.com/b/t1jBvW01/loop-cerveceria-artesanal
