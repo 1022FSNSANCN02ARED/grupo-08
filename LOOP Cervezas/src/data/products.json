@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+        "name":"LOOP Lata Rubia",
+        "price":"240",
+        "category": "Lata",
+        "description": "",
+        "image":""
+    },
+    {
+        "id":2,
+        "name":"LOOP Lata Negra",
+        "price":"240",
+        "category": "Lata",
+        "description": "",
+        "image":""
+    },
+    {
+        "id":3,
+        "name":"LOOP Lata Roja",
+        "price":"240",
+        "category": "Lata",
+        "description": "",
+        "image":""
+    },
+    {
+        "id":3,
+        "name":" LOOP Lata IPA",
+        "price":"240",
+        "category": "Lata",
+        "description": "",
+        "image":""
+    },
+    {
+        "id":4,
+        "name":" LOOP Botella IPA",
+        "price":"340",
+        "category": "Botella",
+        "description": "",
+        "image":""
+    },
+    {
+        "id":5,
+        "name":" LOOP Botella Rubia",
+        "price":"340",
+        "category": "Botella",
+        "description": "",
+        "image":""
+    }
+   
+]
