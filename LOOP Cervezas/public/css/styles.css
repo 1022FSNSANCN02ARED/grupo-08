@@ -4,9 +4,10 @@
   box-sizing: border-box;
   font-family: 'Catamaran', sans-serif;
 }
+
 .header-container{
   background-color: black;
-  padding: 25px 0;
+  padding: 60px 0;
   position: relative;
 }
 
@@ -45,9 +46,10 @@
   text-decoration: none;
 }
 .header-logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 nav{
