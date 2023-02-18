@@ -8,6 +8,7 @@ router.get("/login", mainController.login)
 router.get('/register', mainController.register)
 router.get('/productCart', mainController.productCart)
 router.get('/productDetail', mainController.productDetail)
+router.get('/sobreNosotros', mainController.sobreNosotros)
 
 const productsRouter = require("./products")
 router.use("/products", productsRouter)

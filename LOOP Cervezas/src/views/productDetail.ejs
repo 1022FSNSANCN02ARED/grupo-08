@@ -2,13 +2,20 @@
 
 <body>
   <%- include("partials/header") %>
-    <main>
+  <main>
+
+      <div style="padding:10px 30px;margin:20px">
+        <a href="/" style="background-color: white;font-size: 1.3em;font-weight: bold; color: black; text-decoration: none;padding: 5px;">
+          <i class="fas fa-angle-left"></i> VOLVER
+        </a>
+      </div>
+
       <span class="product">
-        <div class="">
+        <div>
           <img src="/images/RUBIA-lata.png" width="100%" alt="lata" />
         </div>
         <div class="product-box">
-          <h3 class="main-titulo">LOOP Lata Rubia</h3>
+          <h1 style="text-align: center; color: black;">LOOP Lata Rubia</h1>
           <p class="product-price">$220,00</p>
           <p>Tipo: Con Trigo.</p>
           <p>Color: De color dorado</p>
@@ -18,8 +25,11 @@
             Descripción: La malta, el trigo, los lúpulos aromáticos le otorgan
             un sabor no tradicional que la hacen muy particular.
           </p>
+        </span>
+        <div class="productButton">
+          <h3>+ AGREGAR</h3>
         </div>
-      </span>
+        </div>
     </main>
 
     <%- include("partials/footer") %>

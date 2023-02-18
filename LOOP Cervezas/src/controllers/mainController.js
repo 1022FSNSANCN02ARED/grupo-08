@@ -1,3 +1,5 @@
+const products = require("../data/products");
+
 module.exports = {
     index: (req, res)=>{
         res.render('index')
@@ -13,5 +15,8 @@ module.exports = {
     },
     productDetail: (req, res)=>{
         res.render('productDetail')
+    },
+    sobreNosotros: (req, res)=>{
+        res.render('sobreNosotros')
     },
 }
