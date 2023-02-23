@@ -1,20 +1,9 @@
 const express = require('express')
 const router = express.Router();
-const path = require('path')
-
-const multer = require("multer");
-const storage = multer.diskStorage({
-  destination: path.join(__dirname, "../../public/images/products/"),
-  filename: (req, file, cb) => {
-    cb(null, "image" + Date.now() + path.extname(file.originalname));
-  },
-});
-// Middleware Multer
-const upload = multer({
-  storage,
-});
-
 const productsController = require("../controllers/productsController");
+const upload = require('../middlewares/multer')
+
+router.use(express.urlencoded({ extended: true }));
 
 //  GET ALL PRODUCTS 
 router.get("/", productsController.index);
@@ -31,6 +20,6 @@ router.get("/:id/edit", productsController.edit);
 router.put("/:id", productsController.update);
 
 //  DELETE ONE PRODUCT
-router.delete("/:id", productsController.destroy);
+router.delete("/:id/delete", productsController.destroy);
 
 module.exports = router;

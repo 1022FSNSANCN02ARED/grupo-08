@@ -30,9 +30,14 @@
                         <a href="/products/<%= product.id %>/edit">
                             <i class="fas fa-pen"></i>EDITAR
                         </a>
-                        <a href="">
-                            <i class="fas fa-trash"></i>BORRAR
-                        </a>
+
+                        <form action="/products/<%= product.id %>/delete/?_method=delete" method="post" >
+                            <input type="hidden" name="_method" value="DELETE">
+                            <i class="fas fa-trash"></i>
+                            <button type="submit" style="background: none;border: none;cursor: pointer;">
+                                BORRAR
+                            </button>
+                        </form>
                     </div>
                 </div>
             <% }) %>

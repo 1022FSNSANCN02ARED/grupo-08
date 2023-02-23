@@ -1,4 +1,6 @@
 const products = require("../data/products");
+const path = require('path')
+const fs = require('fs')
 
 const controller = {
     // Root - Show all products
@@ -24,13 +26,16 @@ const controller = {
             name: req.body.name,
             price: Number(req.body.price),
             description: req.body.description,
-            image: req.file
-              ? "/images/" + req.file.image
-              : "/images/default-img.png",
+            image:req.file ? req.file.filename:"default-image.png",
+            /*
+                image: req.file
+                ? "/images/" + req.file.image
+                : "/images/default-img.png",
+            */
           };
       
           products.saveProduct(product);
-          res.redirect("/products/");
+          res.redirect("/products");
     },
 
     // Update - Form to edit
@@ -40,14 +45,37 @@ const controller = {
     },
     // Update - Method to update
     update: (req, res) => {
-        const product = req.body;
-        res.send(product);
+        const id = req.params.id;
+        const { name, price, description, image } = req.body;
+        const updatedProduct = {
+            id,
+            name,
+            price,
+            description,
+            image,
+        };
+
+        products.update(updatedProduct);
+
+        res.redirect("/products");
     },
 
     // Delete - Delete one product from DB
     destroy: (req, res) => {
-        /* serv.delete("productsDataBase.json", req.params.id);
-        res.redirect("/products/"); */
+        let product = products.findById(req.params.id);
+        
+        let imagePath = path.join(
+            __dirname,
+            "../public/images/products/" + product.image
+        );
+
+        products.delete(req.params.id);
+
+        if (fs.existsSync(imagePath)) {
+            fs.unlinkSync(imagePath);
+        }
+
+        res.redirect("/products");
     },
 };
 
